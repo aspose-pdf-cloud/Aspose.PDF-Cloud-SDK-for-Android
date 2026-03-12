@@ -816,6 +816,64 @@ public class ConvertTests {
 
 
     /**
+     * GetPdfInStorageToAps Test
+     * @throws ApiException
+     *          if the Api call fails
+     */
+
+    @Test
+    public void getPdfInStorageToApsTest() throws ApiException
+    {
+        String name = "5pages.pdf";
+        th.uploadFile(name);
+
+        String folder = th.tempFolder;
+
+
+        File response = th.pdfApi.getPdfInStorageToAps(name, folder, null);
+        assertNotNull(response);
+    }
+
+
+    /**
+     * PutPdfInStorageToAps Test
+     * @throws ApiException
+     *          if the Api call fails
+     */
+
+    @Test
+    public void putPdfInStorageToApsTest() throws ApiException
+    {
+        String name = "5pages.pdf";
+        th.uploadFile(name);
+
+        String folder = th.tempFolder;
+        String resFileName = "result.xml";
+
+        AsposeResponse response = th.pdfApi.putPdfInStorageToAps(name, th.tempFolder + '/' + resFileName, folder, null);
+        assertEquals(200, (int)response.getCode());
+    }
+
+
+    /**
+     * PutPdfInRequestToAps Test
+     * @throws ApiException
+     *          if the Api call fails
+     */
+
+    @Test
+    public void putPdfInRequestToApsTest() throws ApiException
+    {
+        String name = "5pages.pdf";
+        File file = new File(th.testDataFolder + "/" + name);
+        String resFileName = "result.xml";
+
+        AsposeResponse response = th.pdfApi.putPdfInRequestToAps(th.tempFolder + '/' + resFileName, null, file);
+        assertEquals(200, (int)response.getCode());
+    }
+
+
+    /**
      * GetXfaPdfInStorageToAcroForm Test
      * @throws ApiException
      *          if the Api call fails
