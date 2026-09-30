@@ -54,7 +54,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-pdf-cloud-android</artifactId>
-    <version>26.7.0</version>
+    <version>26.9.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -63,7 +63,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.aspose:aspose-pdf-cloud-android:26.7.0"
+compile "com.aspose:aspose-pdf-cloud-android:26.9.0"
 ```
 
 ### Others
@@ -73,7 +73,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/aspose-pdf-cloud-android-26.7.0.jar
+* target/aspose-pdf-cloud-android-26.9.0.jar
 * target/lib/*.jar
 
 ## Getting Started
