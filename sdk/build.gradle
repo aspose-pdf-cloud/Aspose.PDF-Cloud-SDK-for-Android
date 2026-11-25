@@ -24,8 +24,7 @@ version = '26.10.0'
 
 buildscript {
     repositories {
-        maven { url 'https://dl.google.com/dl/android/maven2/' }
-        mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.+'
@@ -34,8 +33,7 @@ buildscript {
 }
 
 repositories {
-    maven { url 'https://dl.google.com/dl/android/maven2/' }
-    mavenCentral()
+    jcenter()
 }
 
 apply plugin: 'com.android.library'
